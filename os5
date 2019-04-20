@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+int main()
+{
+   int time=0,pid[10],need[10],wait[10],turnt[10],i,j,n,m;
+   int burstt[10],flag[10],totalt=0,totalwt=0;
+   float avgwt,avgtat;
+   system("color 4");
+   printf("\t\t*****ROUND ROBIN SCHEDULING******");
+   printf("\nEnter the number of Processors \n:");
+   scanf("%d",&n);
+   m=n;
+   printf("\nEnter the Timeslice \n");
+   scanf("%d",&time);
+   for(i=1;i<=n;i++)
+    {
+      printf("\nEnter the process ID %d:",i);
+      scanf("%d",&pid[i]);
+   
+      printf("\nEnter the Burst Time for the process:");
+   
+      scanf("%d",&burstt[i]);
+      need[i]=burstt[i];
