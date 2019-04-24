@@ -62,3 +62,16 @@ int main()
   totalwt=totalwt+wait[i];
  totalt=totalt+turnt[i];
 }
+avgwt=(float)totalwt/m;
+avgtat=(float)totalt/m;
+printf("\n\n ROUND ROBIN SCHEDULING ALGORITHM \n\n");
+printf("\n\n Process \t Process ID  \t BurstTime \t Waiting Time \t TurnaroundTime \n ");
+for(i=1;i<=m;i++)
+{
+ printf("\n %8d \t %5d \t\t %5d \t\t %5d \t\t %5d \n", i,pid[i],burstt[i],wait[i],turnt[i]);
+}
+printf("\n The average Waiting Time=%.2f",avgwt);
+printf("\n The average Turn around Time=%.2f",avgtat);
+getch();
+}
+
